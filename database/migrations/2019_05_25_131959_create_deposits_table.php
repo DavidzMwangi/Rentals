@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoomConditionsTable extends Migration
+class CreateDepositsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateRoomConditionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('room_conditions', function (Blueprint $table) {
+        Schema::create('deposits', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->float('amount')->default(0);
+            $table->unsignedBigInteger('tenant_id');
+            $table->boolean('is_active');
             $table->unsignedBigInteger('room_number_id');
-            $table->string('description');
             $table->timestamps();
 
+            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
             $table->foreign('room_number_id')->references('id')->on('room_numbers')->onDelete('cascade');
         });
     }
@@ -30,6 +33,6 @@ class CreateRoomConditionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('room_conditions');
+        Schema::dropIfExists('deposits');
     }
 }
