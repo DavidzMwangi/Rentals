@@ -284,7 +284,7 @@
                 getNewPermissions:function (role_id) {
                     this.role_to_assign_permission=role_id;
                     let me=this;
-                    var url23='{{route('roles_permissions.get_other_permissions')}}';
+                    var url23='{{route('admin.roles_permissions.get_other_permissions')}}';
                     axios.post(url23,{'role_id':role_id})
                         .then(function (response) {
                             me.unassigned_permissions=response.data.records;
@@ -297,10 +297,10 @@
                 saveData:function () {
                     // console.log( this.permission_record);
                     var me=this;
-                    var url23='{{route('roles_permissions.update_permission_to_roles')}}';
+                    var url23='{{route('admin.roles_permissions.update_permission_to_roles')}}';
                     axios.post(url23,{'permissions':me.permission_record,'role_id':me.role_to_assign_permission})
                         .then(function (response) {
-{{--                            window.location='{{route('permission_roles')}}'--}}
+                            window.location='{{route('admin.roles_permissions.permission_roles')}}'
                         })
 
 
@@ -309,7 +309,7 @@
                 getExistingPermission:function (role_id) {
                     this.role_to_detach_permission=role_id;
                     let me=this;
-                    var url23='{{route('roles_permissions.get_active_permissions')}}';
+                    var url23='{{route('admin.roles_permissions.get_active_permissions')}}';
                     axios.post(url23,{'role_id':role_id})
                         .then(function (response) {
                             // console.log(response.data.current_permissions);
@@ -320,10 +320,10 @@
                 saveChanges:function () {
                     // console.log(this.permission_record);
                     var me=this;
-                    var url33='{{route('roles_permissions.update_revokement_to_rules')}}';
+                    var url33='{{route('admin.roles_permissions.update_revokement_to_rules')}}';
                     axios.post(url33,{'permissions':me.permission_record,'role_id':me.role_to_detach_permission})
                         .then(function (response) {
-                            window.location='{{route('roles_permissions.permission_roles')}}'
+                            window.location='{{route('admin.roles_permissions.permission_roles')}}'
                         })
                 }
             }

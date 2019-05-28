@@ -10,7 +10,7 @@ class RolesPermissionController extends Controller
 {
     public function __invoke()
     {
-        return view('backend.roles_permissions.roles_permissions')->withRoles(Role::all())->withPermissions(Permission::all());
+        return view('backend.admin.roles_permissions.roles_permissions')->withRoles(Role::all())->withPermissions(Permission::all());
     }
 
 
