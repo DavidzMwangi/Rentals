@@ -18,7 +18,7 @@ class UserTableSeeder extends Seeder
             [
                 'first_name'        => 'Admin',
                 'last_name'         => 'Istrator',
-                'email'             => 'administrator@gmail.com',
+                'email'             => 'admin@admin.com',
                 'name'=>'Admin',
                 'user_type'=>0,
                 'phone_number'=>'0708768974',
