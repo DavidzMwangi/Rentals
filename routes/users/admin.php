@@ -13,6 +13,11 @@ Route::group(['prefix'=>'roles_permissions','as'=>'roles_permissions.'],function
     Route::post('update_revokement_to_rules','RolesPermissionController@revokePermissionToRole')->name('update_revokement_to_rules');
 
 }) ;
-
+Route::group(['prefix'=>'users','as'=>'users.'],function (){
+   Route::get('all_users','UserController@getAllUsers')->name('all_users');
+   Route::get('edit_user/{user}','UserController@editUser')->name('edit_user');
+   Route::get('add_new_user','UserController@addNewUser')->name('add_new_user');
+   Route::post('save_new_user','UserController@saveNewUser')->name('save_new_user');
+});
 
 });

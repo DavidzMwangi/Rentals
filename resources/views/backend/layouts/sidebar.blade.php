@@ -31,8 +31,15 @@
                     </p>
                 </a>
             </li>
-
-                @endrole
+            <li class="nav-item">
+                <a href="{{route('admin.users.all_users')}}" class="nav-link">
+                    <i class="nav-icon fa fa-dashboard"></i>
+                    <p>
+                        User Management
+                    </p>
+                </a>
+            </li>
+            @endrole
 
             @role('Landlord')
 
