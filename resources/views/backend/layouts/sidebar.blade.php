@@ -42,7 +42,14 @@
             @endrole
 
             @role('Landlord')
-
+            <li class="nav-item">
+                <a href="{{route('landlord.dashboard')}}" class="nav-link">
+                    <i class="nav-icon fa fa-dashboard"></i>
+                    <p>
+                        DashBoard
+                    </p>
+                </a>
+            </li>
             @endrole
 
 
