@@ -50,6 +50,16 @@
                     </p>
                 </a>
             </li>
+
+
+            <li class="nav-item">
+                <a href="{{route('landlord.apartments')}}" class="nav-link">
+                    <i class="nav-icon fa fa-dashboard"></i>
+                    <p>
+                        Apartments
+                    </p>
+                </a>
+            </li>
             @endrole
 
 

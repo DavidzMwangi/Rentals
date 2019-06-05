@@ -26,8 +26,5 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function landlordDashboard()
-    {
-        return view('backend.landlord.dashboard');
-    }
+
 }
