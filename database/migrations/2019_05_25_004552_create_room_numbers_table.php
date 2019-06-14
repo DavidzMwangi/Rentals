@@ -18,7 +18,7 @@ class CreateRoomNumbersTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('building_id');
             $table->string('pricing');
-            $table->integer('room_type');//0-bedsitter 1-one bedroom 2-two bedroom
+            $table->integer('room_type');//0-bedsitter 1-single room 2-one bedroom 3-two bedroom 4- three room
             $table->boolean('is_vacant');
             $table->timestamps();
 
