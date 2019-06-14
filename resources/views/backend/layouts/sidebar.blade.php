@@ -60,6 +60,19 @@
                     </p>
                 </a>
             </li>
+
+
+            <li class="nav-item">
+                <a href="{{route('landlord.building')}}" class="nav-link">
+                    <i class="nav-icon fa fa-dashboard"></i>
+                    <p>
+                        Buildings
+                    </p>
+                </a>
+            </li>
+
+
+
             @endrole
 
 
