@@ -10,12 +10,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Apartment Management</h1>
+                    <h1>Building Management</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Apartments</li>
+                        <li class="breadcrumb-item active">Buildings</li>
                     </ol>
                 </div>
             </div>
@@ -72,9 +72,7 @@
                                     <td>@{{ building.name }}</td>
                                     <td>@{{ building.description }}</td>
                                     <td>@{{ building.apartment.apartment_name }}</td>
-{{--                                    <td>{{$apartment->description}}</td>--}}
-{{--                                    <td>{{$apartment->location->name}}</td>--}}
-{{--                                    <td>{{$apartment->landlord->user->name}}</td>--}}
+
                                     <td>
                                         <a href="#" title="Edit" >  <span class="fa fa-edit" ></span></a>
                                         <a href="#" title="Delete">  <span class="fa fa-trash"></span></a>
@@ -139,7 +137,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" >Save</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         </div>
 
                     </form>

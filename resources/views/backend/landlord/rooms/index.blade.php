@@ -10,12 +10,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Apartment Management</h1>
+                    <h1>Rooms Management</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Apartments</li>
+                        <li class="breadcrumb-item active">Rooms</li>
                     </ol>
                 </div>
             </div>
@@ -158,10 +158,6 @@
 
                                             <option v-for="building in buildings_arr" :value="building.id">@{{ building.name }}</option>
                                         </select>
-{{--                                        @foreach($apartments as $apartment)--}}
-{{--                                            <option value="{{$apartment->id}}">{{$apartment->apartment_name}}</option>--}}
-
-{{--                                        @endforeach--}}
 
                                 </div>
 
@@ -195,7 +191,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" >Save</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel </button>
                         </div>
 
                     </form>
