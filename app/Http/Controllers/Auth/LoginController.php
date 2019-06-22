@@ -58,7 +58,7 @@ class LoginController extends Controller
 
            case 2:
                //tenant
-               return json_encode("please enter the redirector route for the tenant");
+               return redirect()->route('tenant.dashboard');
                break;
        }
     }

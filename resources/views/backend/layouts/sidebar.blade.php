@@ -128,7 +128,42 @@
 
 
             @role('Tenant')
+            <li class="nav-item">
+                <a href="{{route('tenant.dashboard')}}" class="nav-link">
+                    <i class="nav-icon fa fa-dashboard"></i>
+                    <p>
+                        DashBoard
+                    </p>
+                </a>
+            </li>
 
+            <li class="nav-item">
+                <a href="{{route('tenant.room.room_info')}}" class="nav-link">
+                    <i class="nav-icon fa fa-home"></i>
+                    <p>
+                        Room Details
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{route('tenant.room.room_info')}}" class="nav-link">
+                    <i class="nav-icon fa fa-warning"></i>
+                    <p>
+                        Damages
+                    </p>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="{{route('tenant.profile')}}" class="nav-link">
+                    <i class="nav-icon fa fa-user"></i>
+                    <p>
+                      Profile
+                    </p>
+                </a>
+            </li>
             @endrole
 
         </ul>
