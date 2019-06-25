@@ -7,6 +7,11 @@ Route::group(['middleware'=>['auth','role:Tenant'],'prefix'=>'tenant','as'=>'ten
 
     Route::group(['prefix'=>'room','as'=>'room.'],function (){
         Route::get('room_info','RoomController@roomInfo')->name('room_info');
+        Route::get('damages','DamageController')->name('damages');
+        Route::get('get_rooms_building/{building_id}','RoomController@getRoomsBuilding')->name('get_rooms_building');
+        Route::get('get_building_apartments/{apartment_id}','RoomController@getBuildingApartments')->name('get_building_apartments');
+
     });
+
 
 });

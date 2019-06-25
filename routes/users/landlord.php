@@ -25,5 +25,9 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     Route::get('tenants','TenantController@tenants')->name('tenants');
     Route::get('get_occupied_rooms/{building_id}','TenantController@getOccupiedRooms')->name('get_occupied_rooms');
 
+    //damage
+    Route::get('new_damage','DamageController')->name('new_damage');
+    Route::post('save_new_damage','DamageController@saveNewDamage')->name('save_new_damage');
+    Route::get('view_all_damages','DamageController@viewAllDamages')->name('view_all_damages');
 
     });

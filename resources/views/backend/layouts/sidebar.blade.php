@@ -92,7 +92,7 @@
 
 
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('landlord.new_damage')}}" class="nav-link">
                     <i class="nav-icon fa fa-warning"></i>
                     <p>
                         Damages
@@ -147,7 +147,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="{{route('tenant.room.room_info')}}" class="nav-link">
+                <a href="{{route('tenant.room.damages')}}" class="nav-link">
                     <i class="nav-icon fa fa-warning"></i>
                     <p>
                         Damages
