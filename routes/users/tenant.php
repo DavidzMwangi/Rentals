@@ -13,5 +13,14 @@ Route::group(['middleware'=>['auth','role:Tenant'],'prefix'=>'tenant','as'=>'ten
 
     });
 
+    Route::group(['prefix'=>'complaint','as'=>'complaint.'],function (){
+        Route::get('new_complaint','ComplaintController@newComplaint')->name('new_complaint');
+        Route::post('save_new_complaint','ComplaintController@saveNewComplaint')->name('save_new_complaint');
+        Route::get('all_complaints','ComplaintController@allComplaints')->name('all_complaints');
+        Route::get('delete_complaint/{complaint}','ComplaintController@deleteComplaint')->name('delete_complaint');
+        Route::get('view_complaints_responses/{complaint}','ComplaintController@viewComplaintsResponses')->name('view_complaints_responses');
+        Route::post('save_new_complaint_response','ComplaintController@saveNewComplaintResponse')->name('save_new_complaint_response');
+
+    });
 
 });

@@ -58,7 +58,6 @@ class DamageController extends Controller
         //get the apartments
         $rooms=RoomNumber::whereIn('building_id',$building)->pluck('id');
 
-//        return json_encode($rooms);
         $damages=Damage::whereIn('room_number_id',$rooms)->where('is_active',true)->get();
 
         return view('backend.landlord.damage.all_damages')->withDamages($damages);

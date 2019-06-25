@@ -156,6 +156,31 @@
             </li>
 
 
+            <li class="nav-item has-treeview">
+                <a href="#" class="nav-link ">
+                    <i class="nav-icon fa fa-pie-chart"></i>
+                    <p>
+                       Complaints
+                        <i class="right fa fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{route('tenant.complaint.new_complaint')}}" class="nav-link">
+                            <i class="fa fa-circle-o nav-icon"></i>
+                            <p>New Complaints</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('tenant.complaint.all_complaints')}}" class="nav-link ">
+                            <i class="fa fa-circle-o nav-icon"></i>
+                            <p>Existing Complaints</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
             <li class="nav-item">
                 <a href="{{route('tenant.profile')}}" class="nav-link">
                     <i class="nav-icon fa fa-user"></i>
