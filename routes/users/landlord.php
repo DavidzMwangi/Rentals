@@ -34,4 +34,11 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     Route::get('all_complaints','ComplaintController')->name('all_complaints');
     Route::get('view_complaints_responses/{complaint}','ComplaintController@viewComplaintResponses')->name('view_complaints_responses');
     Route::post('save_new_complaint_response','ComplaintController@saveNewComplaintResponse')->name('save_new_complaint_response');
+
+
+    //maintenance
+    Route::get('new_maintenance','MaintenanceController@newMaintenance')->name('new_maintenance');
+    Route::post('save_new_maintenance','MaintenanceController@saveNewMaintenance')->name('save_new_maintenance');
+    Route::get('all_maintenance','MaintenanceController@allMaintenance')->name('all_maintenance');
+    Route::get('mark_maintenance_complete/{maintenance}','MaintenanceController@markMaintenanceComplete')->name('mark_maintenance_complete');
     });

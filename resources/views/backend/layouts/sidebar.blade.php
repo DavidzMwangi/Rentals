@@ -108,15 +108,31 @@
                 </a>
             </li>
 
-
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="nav-icon fa fa-gears"></i>
+            <li class="nav-item has-treeview">
+                <a href="#" class="nav-link ">
+                    <i class="nav-icon fa fa-pie-chart"></i>
                     <p>
                         Maintenance
+                        <i class="right fa fa-angle-left"></i>
                     </p>
                 </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{route('landlord.new_maintenance')}}" class="nav-link">
+                            <i class="fa fa-circle-o nav-icon"></i>
+                            <p>New Maintenance</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('landlord.all_maintenance')}}" class="nav-link ">
+                            <i class="fa fa-circle-o nav-icon"></i>
+                            <p>Existing Maintenance</p>
+                        </a>
+                    </li>
+
+                </ul>
             </li>
+
 
 
 
