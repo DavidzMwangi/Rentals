@@ -41,4 +41,9 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     Route::post('save_new_maintenance','MaintenanceController@saveNewMaintenance')->name('save_new_maintenance');
     Route::get('all_maintenance','MaintenanceController@allMaintenance')->name('all_maintenance');
     Route::get('mark_maintenance_complete/{maintenance}','MaintenanceController@markMaintenanceComplete')->name('mark_maintenance_complete');
+
+
+    //vacation
+    Route::get('vacations','VacationController')->name('vacations');
+    Route::get('approve_vacation/{vacation}','VacationController@approveVacation')->name('approve_vacation');
     });

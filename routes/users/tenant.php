@@ -23,4 +23,10 @@ Route::group(['middleware'=>['auth','role:Tenant'],'prefix'=>'tenant','as'=>'ten
 
     });
 
+    //vacate route
+    Route::group(['prefix'=>'vacate','as'=>'vacate.'],function (){
+       Route::get('vacation','VacationController')->name('vacation');
+       Route::post('save_new_vacation','VacationController@saveNewVacation')->name('save_new_vacation');
+
+    });
 });

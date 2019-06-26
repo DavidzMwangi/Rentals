@@ -134,6 +134,14 @@
             </li>
 
 
+            <li class="nav-item">
+                <a href="{{route('landlord.vacations')}}" class="nav-link">
+                    <i class="nav-icon fa fa-user"></i>
+                    <p>
+                        Vacation
+                    </p>
+                </a>
+            </li>
 
 
             <li class="nav-item">
@@ -203,6 +211,17 @@
 
                 </ul>
             </li>
+
+            <li class="nav-item">
+                <a href="{{route('tenant.vacate.vacation')}}" class="nav-link">
+                    <i class="nav-icon fa fa-user"></i>
+                    <p>
+                      Vacation
+                    </p>
+                </a>
+            </li>
+
+
 
             <li class="nav-item">
                 <a href="{{route('tenant.profile')}}" class="nav-link">
