@@ -99,7 +99,14 @@
                     </p>
                 </a>
             </li>
-
+            <li class="nav-item">
+                <a href="{{route('landlord.all_complaints')}}" class="nav-link">
+                    <i class="nav-icon fa fa-question"></i>
+                    <p>
+                        Complaints
+                    </p>
+                </a>
+            </li>
 
 
             <li class="nav-item">

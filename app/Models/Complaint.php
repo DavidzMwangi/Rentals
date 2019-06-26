@@ -16,6 +16,10 @@ class Complaint extends Model
         return $this->hasMany(ComplaintResponse::class,'complaint_id','id');
     }
 
+    public function Tenant()
+    {
+        return $this->belongsTo(Tenant::class);
+    }
 
 
 }

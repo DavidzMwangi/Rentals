@@ -51,7 +51,6 @@
                                 <th>Created At</th>
 
                                 <th>View Responses</th>
-                                <th>Delete</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -65,16 +64,9 @@
                                     <td>{{ $complaint->room->name }}</td>
                                     <td>{{ $complaint->description }}</td>
                                     <td>{{ $complaint->created_at->toDayDateTimeString() }}</td>
-                                    @if(count($complaint->response)==0)
 
-                                        <td>{{count($complaint->response)}} Responses  </td>
+                                        <td><a href="{{route('landlord.view_complaints_responses',['id'=>$complaint->id])}}" >{{count($complaint->response)}} Responses </a> </td>
 
-
-                                    @else
-                                        <td><a href="{{route('tenant.complaint.view_complaints_responses',['id'=>$complaint->id])}}" >{{count($complaint->response)}} Responses </a> </td>
-
-                                    @endif
-                                    <td><a href="{{route('tenant.complaint.delete_complaint',['id'=>$complaint->id])}}" ><span class="fa fa-trash"></span> </a> </td>
                                 </tr>
 
 

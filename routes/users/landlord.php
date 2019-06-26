@@ -30,4 +30,8 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     Route::post('save_new_damage','DamageController@saveNewDamage')->name('save_new_damage');
     Route::get('view_all_damages','DamageController@viewAllDamages')->name('view_all_damages');
 
+    //complaints
+    Route::get('all_complaints','ComplaintController')->name('all_complaints');
+    Route::get('view_complaints_responses/{complaint}','ComplaintController@viewComplaintResponses')->name('view_complaints_responses');
+    Route::post('save_new_complaint_response','ComplaintController@saveNewComplaintResponse')->name('save_new_complaint_response');
     });

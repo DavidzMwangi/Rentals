@@ -68,7 +68,7 @@ class ComplaintController extends Controller
 
 
         $existingResponse=ComplaintResponse::where('complaint_id',$request->complaint_id)->first();
-        if($existingResponse!=now()){
+        if($existingResponse!=null){
 
             $response=new ComplaintResponse();
             $response->complaint_id=$request->complaint_id;
