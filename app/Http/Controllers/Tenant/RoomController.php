@@ -15,7 +15,7 @@ class RoomController extends Controller
     {
         //get the tenants room info
 
-        $tenant=Tenant::where('user_id',Auth::id())->first()->load(['user','room.building.apartment.location']);
+        $tenant=Tenant::where('user_id',Auth::id())->where('is_active',true)->first()->load(['user','room.building.apartment.location']);
         return view('backend.tenant.room.rooms')->withTenant($tenant);
     }
 

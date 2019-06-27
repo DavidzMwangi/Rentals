@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\VacateJob;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
@@ -51,6 +52,9 @@ class LoginController extends Controller
 
            case 1:{
                //landlord
+
+
+               $this->dispatch(new VacateJob());
                return redirect()->route('landlord.dashboard');
 
                break;

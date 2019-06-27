@@ -46,4 +46,9 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     //vacation
     Route::get('vacations','VacationController')->name('vacations');
     Route::get('approve_vacation/{vacation}','VacationController@approveVacation')->name('approve_vacation');
+
+
+    //reports
+    Route::get('report_preview','ReportController@index')->name('report_preview');
+    Route::get('print_report','ReportController@printReport')->name('print_report');
     });

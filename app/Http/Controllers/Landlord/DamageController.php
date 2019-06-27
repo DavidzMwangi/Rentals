@@ -20,7 +20,7 @@ class DamageController extends Controller
         //get the apartments where the landlord is the one
         $landlord=LandLord::where('user_id',Auth::id())->first();
         $apartments=Apartment::where('landlord_id',$landlord->id)->get();
-        return view('backend.landlord.damage.new')->withApartments($apartments)->withTenants(Tenant::all()->load('user'));
+        return view('backend.landlord.damage.new')->withApartments($apartments)->withTenants(Tenant::where('is_active',true)->get()->load('user'));
     }
 
     public function saveNewDamage(Request $request)

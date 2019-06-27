@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Spatie\Permission\Models\Role;
 
 class RegisterController extends Controller
 {
@@ -29,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/tenant/index';
+    protected $redirectTo = '/tenant/add_room';
 
 
 
@@ -72,7 +73,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        return User::create([
+        $user= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -82,5 +83,23 @@ class RegisterController extends Controller
             'last_name'=>$data['last_name'],
             'phone_number'=>$data['phone_number']
         ]);
+
+
+
+ $tenantRole=Role::where('name','Tenant')->first();
+//        $officerRole=Role::where('name','Agricultural Officer')->first();
+//        $farmerRole=Role::where('name','Farmer')->first();
+//        if (request('user_type')==0) {
+            $user->assignRole($tenantRole);
+//        }else if (request('user_type')==1){
+//            $user->assignRole($officerRole);
+//        }else{
+//            $user->assignRole($farmerRole);
+//
+//
+//        }
+
+
+        return  $user;
     }
 }

@@ -1,5 +1,13 @@
 <?php
-Route::group(['middleware'=>['auth','role:Tenant'],'prefix'=>'tenant','as'=>'tenant.','namespace'=>'Tenant'],function () {
+
+
+
+Route::get('add_room', 'Tenant\UserController@addRoom')->name('add_room')->middleware('auth');
+Route::get('get_building_apartments/{apartment_id}','Tenant\UserController@buildingApartment')->middleware('auth')->name('get_building_apartments');
+Route::get('get_rooms_building/{apartment_id}','Tenant\UserController@getRoomsBuilding')->middleware('auth')->name('get_rooms_building');
+Route::post('save_tenant_details_now','Tenant\UserController@saveTenantDetails')->middleware('auth')->name('save_tenant_details_now');
+
+Route::group(['middleware'=>['auth','role:Tenant','tenant_room'],'prefix'=>'tenant','as'=>'tenant.','namespace'=>'Tenant'],function () {
 
     Route::get('dashboard', 'HomeController@tenantDashBoard')->name('dashboard');
     Route::get('profile', 'UserController@profileView')->name('profile');
@@ -26,6 +34,7 @@ Route::group(['middleware'=>['auth','role:Tenant'],'prefix'=>'tenant','as'=>'ten
     //vacate route
     Route::group(['prefix'=>'vacate','as'=>'vacate.'],function (){
        Route::get('vacation','VacationController')->name('vacation');
+       Route::get('approve_vacation/{vacation}','VacationController@approveVacation')->name('approve_vacation');
        Route::post('save_new_vacation','VacationController@saveNewVacation')->name('save_new_vacation');
 
     });

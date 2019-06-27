@@ -1,6 +1,7 @@
 @extends('backend.layouts.master')
 @section('style')
     <link rel="stylesheet" href="{{asset('adminlte/plugins/datatables/dataTables.bootstrap4.css')}}">
+    <link rel="stylesheet" href="{{asset('adminlte/plugins/datepicker/datepicker3.css')}}">
 
 @endsection
 
@@ -42,7 +43,7 @@
                 <div class="form-group">
                     <label>Vacation Date</label>
 
-                    <input type="date" name="vacate_date" class="form-control">
+                    <input  name="vacate_date" id="vacate_date" class="form-control">
                 </div>
             </div>
         </div>
@@ -81,6 +82,7 @@
                                 <th>Building</th>
                                 <th>Room Number</th>
                                 <th>Vacation Date</th>
+                                <th>Vacate</th>
 
                             </tr>
                             </thead>
@@ -93,7 +95,15 @@
                                     <td>{{ $vacation->room->building->name }}</td>
                                     <td>{{ $vacation->room->name }}</td>
                                     <td>{{ $vacation->vacate_date }}</td>
+                                <td>
 
+                                    @if($vacation->is_active)
+                                        <a href="#"  onclick="approveVacation()">Approve Vacation</a>
+                                    @else
+                                        <span class="badge badge-success">Vacation Approved</span>
+
+                                    @endif
+                                </td>
 
                                 </tr>
 
@@ -124,6 +134,7 @@
     <script src="{{asset('adminlte/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
     <!-- FastClick -->
     <script src="{{asset('adminlte/plugins/fastclick/fastclick.js')}}"></script>
+    <script src="{{asset('adminlte/plugins/datepicker/bootstrap-datepicker.js')}}"></script>
     <script>
         $(function () {
             $("#example1e").DataTable();
@@ -137,5 +148,60 @@
                 "autoWidth": false
             });
         });
+
+        function approveVacation() {
+            let abr='{{route('tenant.vacate.approve_vacation',['id'=>$vacation])}}';
+            axios.get(abr)
+                .then(res=>{
+                console.log(res.data);
+
+                if (res.data.status==1){
+
+                    swal("Success", "You have vacated the room", "success");
+
+                } else{
+                    swal("Warning!", res.data.rer, "warning");
+
+                }
+
+
+                })
+                .catch(err=>{
+
+                })
+        }
+
+    </script>
+
+    <script>
+
+
+        $(function () {
+
+
+            var d=new Date();
+           //  var currMonth=d.getMonth();
+           //  var curYear=d.getFullYear();
+           //  var startDate=new Date(curYear,currMonth,6);
+           //  var endDate=new Date(curYear,currMonth+1,5);
+           //
+           //
+           //  console.log(curYear+"/"+currMonth+"/"+6)
+           //  $('#vacate_date').datepicker({
+           //     format:"yyyy-mm-dd",
+           //     startDate:startDate,
+           //     // onSelect:function (selected) {
+           //     //     $('#vacate_date').datepicker("option","minDate",startDate);
+           //     // }
+           //
+           // });
+
+            $('#vacate_date').datepicker({
+                defaultDate: "+1w",
+                changeMonth: true
+            });
+            // $('#vacate_date').datepicker("setStartDate",startDate);
+            // $('#vacate_date').datepicker("setEndDate",endDate);
+        })
     </script>
 @endsection

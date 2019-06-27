@@ -28,6 +28,6 @@ Route::group(['middleware'=>'auth'],function (){
 
    //roles and permission routes
 
-
+    Route::get('determine_vacation_status','UserController@determineVacationContent')->name('determine_vacation_status');
 
 });
