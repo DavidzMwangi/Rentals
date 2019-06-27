@@ -136,9 +136,18 @@
 
             <li class="nav-item">
                 <a href="{{route('landlord.vacations')}}" class="nav-link">
-                    <i class="nav-icon fa fa-user"></i>
+                    <i class="nav-icon fa fa-object-group"></i>
                     <p>
                         Vacation
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{route('landlord.all_rents')}}" class="nav-link">
+                    <i class="nav-icon fa fa-money"></i>
+                    <p>
+                        Rent
                     </p>
                 </a>
             </li>
@@ -221,7 +230,14 @@
                 </a>
             </li>
 
-
+            <li class="nav-item">
+                <a href="{{route('tenant.rent.index')}}" class="nav-link">
+                    <i class="nav-icon fa fa-money"></i>
+                    <p>
+                        Rent
+                    </p>
+                </a>
+            </li>
 
             <li class="nav-item">
                 <a href="{{route('tenant.profile')}}" class="nav-link">

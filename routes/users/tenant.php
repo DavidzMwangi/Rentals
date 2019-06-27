@@ -38,4 +38,11 @@ Route::group(['middleware'=>['auth','role:Tenant','tenant_room'],'prefix'=>'tena
        Route::post('save_new_vacation','VacationController@saveNewVacation')->name('save_new_vacation');
 
     });
-});
+
+    Route::group(['prefix'=>'rent','as'=>'rent.'],function () {
+        Route::get('index','RentController')->name('index');
+        Route::post('save_new_rent','RentController@saveNewRent')->name('save_new_rent');
+
+    });
+
+    });

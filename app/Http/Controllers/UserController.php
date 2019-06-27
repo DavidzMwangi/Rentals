@@ -36,9 +36,9 @@ class UserController extends Controller
             'name'=>'required',
             'first_name'=>'required',
             'last_name'=>'required',
-            'email'=>'required',
-            'phone_number'=>'required',
-            'password'=>'required|confirmed'
+            'email'=>'required|unique:users',
+            'phone_number'=>'required|min:10|max:10',
+            'password'=>'required|confirmed|min:8'
         ]);
 
         $user=User::find($request->user_id);

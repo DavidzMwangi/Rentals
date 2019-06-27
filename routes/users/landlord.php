@@ -51,4 +51,9 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     //reports
     Route::get('report_preview','ReportController@index')->name('report_preview');
     Route::get('print_report','ReportController@printReport')->name('print_report');
+
+
+    //rents
+    Route::get('all_rents','RentController')->name('all_rents');
+    Route::get('verify_rent/{rent}','RentController@verifyRent')->name('verify_rent');
     });

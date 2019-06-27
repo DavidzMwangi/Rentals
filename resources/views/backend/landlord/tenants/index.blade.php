@@ -74,7 +74,6 @@
                                 <th>Room Type</th>
                                 <th>Rent Balance</th>
                                 <th>Deposit Amount</th>
-                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -101,10 +100,7 @@
                                 <td>
                                     @{{ tenant.current_deposit_amount }}
                                 </td>
-                                <td>
-                                    <a href="#" title="Edit" >  <span class="fa fa-edit" ></span></a>
-                                    <a href="#" title="Delete">  <span class="fa fa-trash"></span></a>
-                                </td>
+
                             </tr>
 
 
