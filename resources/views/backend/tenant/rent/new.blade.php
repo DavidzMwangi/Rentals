@@ -96,7 +96,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Current Active Vacation</h3>
+                        <h3 class="card-title">Rent</h3>
 
 
                     </div>

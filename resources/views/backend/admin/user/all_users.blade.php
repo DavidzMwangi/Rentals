@@ -67,7 +67,7 @@
                                     </td>
                                     <td>
                                         <a href="{{route('admin.users.edit_user',['id'=>$user->id])}}" title="Edit" >  <span class="fa fa-edit" ></span></a>
-                                        <a href="" title="Delete">  <span class="fa fa-trash"></span></a>
+                                        <a href="{{route('admin.users.delete_user',['id'=>$user->id])}}" title="Delete">  <span class="fa fa-trash"></span></a>
                                     </td>
                                 </tr>
 

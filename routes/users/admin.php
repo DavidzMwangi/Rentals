@@ -18,6 +18,7 @@ Route::group(['prefix'=>'users','as'=>'users.'],function (){
    Route::get('edit_user/{user}','UserController@editUser')->name('edit_user');
    Route::get('add_new_user','UserController@addNewUser')->name('add_new_user');
    Route::post('save_new_user','UserController@saveNewUser')->name('save_new_user');
+   Route::get('delete_user/{user}','UserController@deleteUser')->name('delete_user');
 });
 
 });

@@ -147,10 +147,10 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-        <strong>Copyright &copy; 2014-2018 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-        All rights reserved.
+        <strong>Copyright &copy; {{date('Y')}} Rentals Management System</strong>
+
         <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 3.0.0-alpha
+
         </div>
     </footer>
 
@@ -167,10 +167,10 @@
 <script src="{{asset('adminlte/plugins/jquery/jquery.min.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-    $.widget.bridge('uibutton', $.ui.button)
-</script>
+{{--<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->--}}
+{{--<script>--}}
+{{--    $.widget.bridge('uibutton', $.ui.button)--}}
+{{--</script>--}}
 
 
 <!-- AdminLTE App -->

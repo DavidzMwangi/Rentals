@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Dashboard</h1>
+                    <h1 class="m-0 text-dark">All Rent Transactions</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -38,69 +38,126 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
+
+
             <div class="row">
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>150</h3>
+                <div class="col-12">
+                    <!-- /.card -->
 
-                            <p>New Orders</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-bag"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3>53<sup style="font-size: 20px">%</sup></h3>
+                    <div class="card">
 
-                            <p>Bounce Rate</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-warning">
-                        <div class="inner">
-                            <h3>44</h3>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Amount </th>
+                                    <th>Month</th>
+                                    <th>Year</th>
+                                    <th>Confirmation Code</th>
+                                    <th>Is Verified</th>
 
-                            <p>User Registrations</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-person-add"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                            <h3>65</h3>
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                            <p>Unique Visitors</p>
+
+                                @foreach($rents as $rent)
+                                    <tr >
+                                        <td>{{ $rent->amount }}</td>
+                                        <td>{{ $rent->month }}</td>
+                                        <td>{{ $rent->year }}</td>
+                                        <td>{{ $rent->confirmation_code }}</td>
+                                        <td>
+
+                                            @if($rent->is_verified)
+                                                <span class="badge badge-success">Verified</span>
+
+                                            @else
+
+                                                <span class="badge badge-danger">Not Verified</span>
+
+                                            @endif
+                                        </td>
+
+                                    </tr>
+
+                                @endforeach
+
+                                </tbody>
+
+                            </table>
                         </div>
-                        <div class="icon">
-                            <i class="ion ion-pie-graph"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <!-- /.card-body -->
                     </div>
+                    <!-- /.card -->
                 </div>
-                <!-- ./col -->
+                <!-- /.col -->
             </div>
+
+            <!-- Small boxes (Stat box) -->
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-3 col-6">--}}
+{{--                    <!-- small box -->--}}
+{{--                    <div class="small-box bg-info">--}}
+{{--                        <div class="inner">--}}
+{{--                            <h3>150</h3>--}}
+
+{{--                            <p>New Orders</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="ion ion-bag"></i>--}}
+{{--                        </div>--}}
+{{--                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <!-- ./col -->--}}
+{{--                <div class="col-lg-3 col-6">--}}
+{{--                    <!-- small box -->--}}
+{{--                    <div class="small-box bg-success">--}}
+{{--                        <div class="inner">--}}
+{{--                            <h3>53<sup style="font-size: 20px">%</sup></h3>--}}
+
+{{--                            <p>Bounce Rate</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="ion ion-stats-bars"></i>--}}
+{{--                        </div>--}}
+{{--                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <!-- ./col -->--}}
+{{--                <div class="col-lg-3 col-6">--}}
+{{--                    <!-- small box -->--}}
+{{--                    <div class="small-box bg-warning">--}}
+{{--                        <div class="inner">--}}
+{{--                            <h3>44</h3>--}}
+
+{{--                            <p>User Registrations</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="ion ion-person-add"></i>--}}
+{{--                        </div>--}}
+{{--                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <!-- ./col -->--}}
+{{--                <div class="col-lg-3 col-6">--}}
+{{--                    <!-- small box -->--}}
+{{--                    <div class="small-box bg-danger">--}}
+{{--                        <div class="inner">--}}
+{{--                            <h3>65</h3>--}}
+
+{{--                            <p>Unique Visitors</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="ion ion-pie-graph"></i>--}}
+{{--                        </div>--}}
+{{--                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <!-- ./col -->--}}
+{{--            </div>--}}
             <!-- /.row -->
             <!-- Main row -->
 
@@ -138,6 +195,23 @@
     <script src="{{asset('adminlte/dist/js/pages/dashboard.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{asset('adminlte/dist/js/demo.js')}}"></script>
+    <script src="{{asset('adminlte/plugins/datatables/jquery.dataTables.js')}}"></script>
+    <script src="{{asset('adminlte/plugins/datatables/dataTables.bootstrap4.js')}}"></script>
+    <script>
+        $(function () {
+            $("#example1e").DataTable();
+            $("#permission_table").DataTable();
+            $('#example1').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false
+            });
+        });
 
 
+
+    </script>
 @endsection
