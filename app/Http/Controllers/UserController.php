@@ -9,6 +9,7 @@ use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -53,11 +54,27 @@ class UserController extends Controller
         $user->email=$request->email;
         $user->phone_number=$request->phone_number;
         $user->user_type=$request->user_type;
+
+
         $user->password=bcrypt($request->password);
         $user->save();
 
+        //0-admin 1-landlord 2-tenant
 
-        return redirect()->back();
+        $tenantRole=Role::where('name','Tenant')->first();
+        $landlord=Role::where('name','Landlord')->first();
+        $admin=Role::where('name','Admin')->first();
+        if (request('user_type')==0) {
+        $user->assignRole($admin);
+        }else if (request('user_type')==1){
+            $user->assignRole($landlord);
+        }else{
+            $user->assignRole($tenantRole);
+
+
+        }
+
+        return redirect()->route('admin.users.all_users');
     }
 
     public function determineVacationContent()

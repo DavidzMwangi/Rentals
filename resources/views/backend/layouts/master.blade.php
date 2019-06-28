@@ -30,6 +30,23 @@
                 <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
             </li>
 
+            @if(\Illuminate\Support\Facades\Request::route()->getPrefix()=='/admin')
+
+                @elseif(\Illuminate\Support\Facades\Request::route()->getPrefix()=='/landlord')
+                <button data-target="#online_help_modal" data-toggle="modal" class="btn btn-primary" >  Online Help</button>
+
+
+
+            @elseif(\Illuminate\Support\Facades\Request::route()->getPrefix()=='/tenant')
+                <button data-target="#online_help_modal" data-toggle="modal" class="btn btn-primary" >  Online Help</button>
+
+
+
+            @endif
+
+
+{{--            {{\Illuminate\Support\Facades\Request::route()->getPrefix()=='/admin'?'active':''}}--}}
+
         </ul>
 
 
@@ -145,6 +162,39 @@
 
         <!-- /.content -->
     </div>
+
+
+
+    <div class="modal " tabindex="-1" role="dialog" id="online_help_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Online Help</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    @if(\Illuminate\Support\Facades\Request::route()->getPrefix()=='/admin')
+
+
+                    @elseif(\Illuminate\Support\Facades\Request::route()->getPrefix()=='/landlord')
+                        @include('backend.online_help.landlord')
+
+
+                    @elseif(\Illuminate\Support\Facades\Request::route()->getPrefix()=='/tenant')
+                        @include('backend.online_help.tenant')
+
+
+                    @endif
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <strong>Copyright &copy; {{date('Y')}} Rentals Management System</strong>
@@ -185,5 +235,9 @@
 
 @yield('script')
 <!-- Morris.js charts -->
+
+
+
+
 </body>
 </html>

@@ -135,19 +135,55 @@
     <!-- FastClick -->
     <script src="{{asset('adminlte/plugins/fastclick/fastclick.js')}}"></script>
     <script src="{{asset('adminlte/plugins/datepicker/bootstrap-datepicker.js')}}"></script>
+
+
+
+    <link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet">
+
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+
     <script>
         $(function () {
-            $("#example1e").DataTable();
-            $("#permission_table").DataTable();
-            $('#example1').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false
+            $("#example1").DataTable({
+
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'print',
+                        customize: function ( win ) {
+                            $(win.document.body)
+                                .css( 'font-size', '10pt' )
+                                .prepend(
+                                    '<img src="http://datatables.net/media/images/logo-fade.png" style="position:absolute; top:0; left:0;" />'
+                                );
+
+                            $(win.document.body).find( 'table' )
+                                .addClass( 'compact' )
+                                .css( 'font-size', 'inherit' );
+                        }
+                    }
+                ]
             });
+            $("#permission_table").DataTable();
+            // $('#example1').DataTable({
+            //     "paging": true,
+            //     "lengthChange": false,
+            //     "searching": true,
+            //     "ordering": true,
+            //     "info": true,
+            //     // "autoWidth": false,
+            //     button:[
+            //         'print'
+            //     ]
+            // });
         });
+
+
+
+    </script>
+    <script>
+
 
         function approveVacation() {
             let abr='{{route('tenant.vacate.approve_vacation',['id'=>$vacation])}}';

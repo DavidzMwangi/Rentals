@@ -7,6 +7,7 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     Route::get('apartments','ApartmentController')->name('apartments');
     Route::get('new_apartment','ApartmentController@newAppartmentView')->name('new_apartment');
     Route::post('save_new_apartment','ApartmentController@saveNewApartment')->name('save_new_apartment');
+    Route::get('delete_apartment/{apartment}','ApartmentController@deleteApartment')->name('delete_apartment');
 
     //building routes
     Route::get('building','BuildingController@building')->name('building');

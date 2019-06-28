@@ -197,18 +197,36 @@
     <script src="{{asset('adminlte/dist/js/demo.js')}}"></script>
     <script src="{{asset('adminlte/plugins/datatables/jquery.dataTables.js')}}"></script>
     <script src="{{asset('adminlte/plugins/datatables/dataTables.bootstrap4.js')}}"></script>
+
+
+
+
+{{--    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">--}}
+    <link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet">
+
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+
     <script>
         $(function () {
-            $("#example1e").DataTable();
-            $("#permission_table").DataTable();
-            $('#example1').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false
+            $("#example1").DataTable({
+
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'print',
+                        customize: function ( win ) {
+                            $(win.document.body)
+                                .css( 'font-size', '10pt' );
+
+                            $(win.document.body).find( 'table' )
+                                .addClass( 'compact' )
+                                .css( 'font-size', 'inherit' );
+                        }
+                    }
+                ]
             });
+
         });
 
 

@@ -43,4 +43,16 @@ class ApartmentController extends Controller
 
         return redirect()->route('landlord.apartments');
     }
+
+    public function deleteApartment(Apartment $apartment)
+    {
+        try{
+            $apartment->delete();
+        }catch (\Exception $e){
+
+        }
+
+
+        return redirect()->back();
+    }
 }

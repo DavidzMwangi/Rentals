@@ -57,8 +57,8 @@
                                     <td>{{$apartment->location->name}}</td>
                                     <td>{{$apartment->landlord->user->name}}</td>
                                     <td>
-                                        <a href="#" title="Edit" >  <span class="fa fa-edit" ></span></a>
-                                        <a href="#" title="Delete">  <span class="fa fa-trash"></span></a>
+{{--                                        <a href="#" title="Edit" >  <span class="fa fa-edit" ></span></a>--}}
+                                        <a href="{{route('landlord.delete_apartment',['id'=>$apartment->id])}}" title="Delete">  <span class="fa fa-trash"></span></a>
                                     </td>
                                 </tr>
 
@@ -86,17 +86,50 @@
     <script src="{{asset('adminlte/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
     <!-- FastClick -->
     <script src="{{asset('adminlte/plugins/fastclick/fastclick.js')}}"></script>
+
+
+    <link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet">
+
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+
     <script>
         $(function () {
-            $("#example1").DataTable();
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false
+            $("#example1").DataTable({
+
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'print',
+                        customize: function ( win ) {
+                            $(win.document.body)
+                                .css( 'font-size', '10pt' )
+                                .prepend(
+                                    '<img src="http://datatables.net/media/images/logo-fade.png" style="position:absolute; top:0; left:0;" />'
+                                );
+
+                            $(win.document.body).find( 'table' )
+                                .addClass( 'compact' )
+                                .css( 'font-size', 'inherit' );
+                        }
+                    }
+                ]
             });
+            $("#permission_table").DataTable();
+            // $('#example1').DataTable({
+            //     "paging": true,
+            //     "lengthChange": false,
+            //     "searching": true,
+            //     "ordering": true,
+            //     "info": true,
+            //     // "autoWidth": false,
+            //     button:[
+            //         'print'
+            //     ]
+            // });
         });
+
+
+
     </script>
     @endsection
