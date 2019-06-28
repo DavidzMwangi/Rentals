@@ -53,4 +53,11 @@ class RoomController extends Controller
         return redirect()->back();
 
     }
+
+    public function deleteRoom(RoomNumber $room )
+    {
+        $room->delete();
+
+        return response()->json();
+    }
 }

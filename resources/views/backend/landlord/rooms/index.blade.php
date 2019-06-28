@@ -101,8 +101,8 @@
                                 </td>
 
                                 <td>
-                                    <a href="#" title="Edit" >  <span class="fa fa-edit" ></span></a>
-                                    <a href="#" title="Delete">  <span class="fa fa-trash"></span></a>
+{{--                                    <a href="#" title="Edit" >  <span class="fa fa-edit" ></span></a>--}}
+                                    <a href="#" title="Delete" @click="deleteRoom(room.id)">  <span class="fa fa-trash"></span></a>
                                 </td>
                             </tr>
 
@@ -275,6 +275,20 @@
 
 
                         });
+                },
+                deleteRoom:function (roomId) {
+                    let url='{{url('landlord/delete_room')}}'+"/"+roomId;
+
+                    axios.get(url)
+                        .then(res=>{
+                            swal("Success", "Room Successfully deleted", "success");
+                            window.location='{{url('landlord/rooms')}}'
+
+                        })
+                        .catch(err=>{
+
+
+                        })
                 }
             }
 

@@ -11,6 +11,7 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     //building routes
     Route::get('building','BuildingController@building')->name('building');
     Route::get('get_apartment_buildings/{apartment_id}','BuildingController@getApartmentBuildings')->name('get_apartment_buildings');
+    Route::get('delete_building/{building}','BuildingController@deleteBuilding')->name('delete_building');
     Route::post('save_new_building','BuildingController@saveNewBuilding')->name('save_new_building');
 
 
@@ -18,6 +19,7 @@ Route::get('dashboard','HomeController@landlordDashboard')->name('dashboard');
     Route::get('rooms','RoomController@rooms')->name('rooms');
     Route::get('get_building_apartments/{apartment_id}','RoomController@getBuildingApartments')->name('get_building_apartments');
     Route::get('get_rooms_building/{building_id}','RoomController@getRoomsBuilding')->name('get_rooms_building');
+    Route::get('delete_room/{room}','RoomController@deleteRoom')->name('delete_room');
     Route::post('save_new_room','RoomController@saveNewRoom')->name('save_new_room');
 
 

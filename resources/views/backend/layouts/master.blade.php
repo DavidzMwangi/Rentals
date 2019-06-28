@@ -72,10 +72,25 @@
                     </a>
 
 
+                    <?php
+                    //get the apartments where the landlord is the one
+                    $landlord=\App\Models\LandLord::where('user_id',\Illuminate\Support\Facades\Auth::id())->first();
+                    $apartments=\App\Models\Apartment::where('landlord_id',$landlord->id)->pluck('id');
+
+                    //get the buildings
+                    $building=\App\Models\Building::whereIn('apartment_id',$apartments)->pluck('id');
+
+                    //get the apartments
+                    $rooms=\App\Models\RoomNumber::whereIn('building_id',$building)->pluck('id');
+
+                    $maintenance=\App\Models\Maintenance::whereIn('room_number_id',$rooms)->where('is_completed',false)->whereMonth('maintenance_date_time','<=',date('Y-m-d',strtotime('-2 month')))->get();
+                    ?>
 
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item">
-                        <i class="fa fa-gears mr-2"></i> Maintenance Notification
+                        <i class="fa fa-gears mr-2">
+
+                        </i>{{count($maintenance)}}  Maintenance Notification
 {{--                        <span class="float-right text-muted text-sm">12 hours</span>--}}
                     </a>
                     @endrole

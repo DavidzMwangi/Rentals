@@ -43,7 +43,7 @@
                 <div class="form-group">
                     <label>Vacation Date</label>
 
-                    <input  name="vacate_date" id="vacate_date" class="form-control">
+                    <input  name="vacate_date" type="date" class="form-control">
                 </div>
             </div>
         </div>

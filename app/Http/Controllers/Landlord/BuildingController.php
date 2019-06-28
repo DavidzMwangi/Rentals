@@ -45,4 +45,12 @@ class BuildingController extends Controller
 
         return redirect()->back();
     }
+
+    public function deleteBuilding(Building $building)
+    {
+        $building->delete();
+
+
+        return response()->json();
+    }
 }

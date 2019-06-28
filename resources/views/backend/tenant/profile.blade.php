@@ -82,21 +82,6 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="password" class=" control-label">Password</label>
-
-                                            <div class="col-sm-10">
-                                                <input type="password" class="form-control" name="password" id="password"  placeholder="Password" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="password_confirmation" class=" control-label">Password Confirmation</label>
-
-                                            <div class="col-sm-10">
-                                                <input type="password" class="form-control" id="password_confirmation"  name="password_confirmation" placeholder="Password Confirmation">
-                                            </div>
-                                        </div>
 
 
 

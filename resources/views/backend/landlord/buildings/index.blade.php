@@ -74,8 +74,8 @@
                                     <td>@{{ building.apartment.apartment_name }}</td>
 
                                     <td>
-                                        <a href="#" title="Edit" >  <span class="fa fa-edit" ></span></a>
-                                        <a href="#" title="Delete">  <span class="fa fa-trash"></span></a>
+{{--                                        <a href="#" title="Edit" >  <span class="fa fa-edit" ></span></a>--}}
+                                        <a href="#" title="Delete" @click="deleteBuilding(building.id)">  <span class="fa fa-trash"></span></a>
                                     </td>
                                 </tr>
 
@@ -198,6 +198,19 @@
 
                         })
                     // alert(this.selected)
+                },
+                deleteBuilding:function (buildingId) {
+                    let url='{{url('landlord/delete_building')}}'+'/'+buildingId;
+                    axios.get(url)
+                        .then(res=>{
+                            swal("Success", "Room Successfully deleted", "success");
+                            window.location='{{url('landlord/building')}}'
+
+                        })
+                        .catch(err=>{
+
+
+                        })
                 }
             }
         })

@@ -26,8 +26,8 @@ class UserController extends Controller
             'name'=>'required',
             'first_name'=>'required',
             'last_name'=>'required',
-            'phone_number'=>'required',
-            'password'=>'required|confirmed'
+            'phone_number'=>'required|min:10|numeric',
+//            'password'=>'required|confirmed'
 
         ]);
 
@@ -36,7 +36,7 @@ class UserController extends Controller
         $user->first_name=$request->first_name;
         $user->last_name=$request->last_name;
         $user->phone_number=$request->phone_number;
-        $user->password=bcrypt($request->password);
+//        $user->password=bcrypt($request->password);
         $user->save();
 
 
@@ -71,10 +71,13 @@ class UserController extends Controller
         ]);
 
 
+        $room=RoomNumber::find($request->room_id);
+
+
         $tenant=new Tenant();
         $tenant->room_number_id=$request->room_id;
         $tenant->rent_balance=0;
-        $tenant->current_deposit_amount=0;
+        $tenant->current_deposit_amount=$room->pricing;
         $tenant->user_id=Auth::id();
         $tenant->is_active=true;
         $tenant->save();
