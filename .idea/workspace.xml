@@ -2,28 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab9b0757-1836-49fd-90f1-d4a2624ff58a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/online_help/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/online_help/landlord.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/online_help/tenant.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Landlord/ApartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Landlord/ApartmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Landlord/TenantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Landlord/TenantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Tenant/RentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Tenant/RentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Tenant/RoomController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Tenant/RoomController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Tenant/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Tenant/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/roles_permissions/roles_permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/roles_permissions/roles_permissions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/user/all_users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/user/all_users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/landlord/apartments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/landlord/apartments/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/landlord/complaints/all_complaints.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/landlord/complaints/all_complaints.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/landlord/maintenance/all_maintenance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/landlord/maintenance/all_maintenance.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/landlord/rent/new.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/landlord/rent/new.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/landlord/vacate/vacate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/landlord/vacate/vacate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/landlord/apartments/new.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/landlord/apartments/new.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/landlord/tenants/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/landlord/tenants/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tenant/complaints/view_complaints.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tenant/complaints/view_complaints.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tenant/damage/damage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tenant/damage/damage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tenant/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tenant/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tenant/rent/new.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tenant/rent/new.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/tenant/room/new_room.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tenant/room/new_room.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/tenant/room/rooms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tenant/room/rooms.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tenant/vacate/vacate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tenant/vacate/vacate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users/landlord.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users/landlord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users/tenant.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users/tenant.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,102 +31,106 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/roles_permissions/roles_permissions.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="132" column="10" lean-forward="true" selection-start-line="132" selection-end-line="187" />
+            <state relative-caret-position="132">
+              <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Landlord/TenantController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
               <folding>
-                <element signature="e#6087#8878#0#HTML" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+                <element signature="e#49#74#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Tenant/RentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="88" selection-start-line="88" selection-end-line="100" />
+            <state relative-caret-position="943">
+              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+              <folding>
+                <element signature="e#47#67#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/users/landlord.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Tenant/RoomController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="82" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="82" />
+            <state relative-caret-position="483">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Landlord/ApartmentController.php">
+        <entry file="file://$PROJECT_DIR$/app/Jobs/VacateJob.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="-124">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/rent/new.blade.php">
+        <entry file="file://$PROJECT_DIR$/routes/users/tenant.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="184" selection-start-line="184" selection-end-line="184" />
+            <state relative-caret-position="184">
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Tenant/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+              <folding>
+                <element signature="e#47#71#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/rent/new.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2797">
+              <caret line="154" column="13" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/tenants/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="76" column="55" selection-start-line="76" selection-start-column="55" selection-end-line="76" selection-end-column="55" />
+            <state relative-caret-position="104">
+              <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/room/rooms.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="80" column="97" selection-start-line="80" selection-start-column="97" selection-end-line="80" selection-end-column="97" />
               <folding>
-                <element signature="e#40#66#0#PHP" expanded="true" />
+                <element signature="e#2297#3184#0#HTML" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_24_220831_update_users_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/apartments/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="45" column="54" lean-forward="true" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/online_help/landlord.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -163,6 +158,8 @@
       <find>profile</find>
       <find>modal</find>
       <find>logout</find>
+      <find>mainte</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,15 +168,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/backend/landlord/report/preview.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/landlord/report/print_report.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Landlord/ReportController.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/tenant/room/new_room.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Tenant/VacationController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Tenant/RoomController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Landlord/DamageController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/landlord/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/4fddbdf0ce2399b7d68df4b9e29b2d790a72f22b.php" />
@@ -188,20 +181,14 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_27_173436_create_rents_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Rent.php" />
-        <option value="$PROJECT_DIR$/routes/users/tenant.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Tenant/RentController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Landlord/RentController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/landlord/tenants/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/layouts/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/tenant/profile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Landlord/RoomController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Landlord/BuildingController.php" />
         <option value="$PROJECT_DIR$/routes/users/admin.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Tenant/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Tenant/UserController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/tenant/room/rooms.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/tenant/damage/damage.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/tenant/complaints/view_complaints.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/tenant/vacate/vacate.blade.php" />
@@ -212,16 +199,26 @@
         <option value="$PROJECT_DIR$/resources/views/backend/landlord/vacate/vacate.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/landlord/rent/new.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/admin/roles_permissions/roles_permissions.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/admin/user/all_users.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/tenant/rent/new.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/tenant/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/admin/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/online_help/landlord.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/landlord/apartments/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/users/landlord.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Landlord/ApartmentController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/admin/user/all_users.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/landlord/apartments/new.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Landlord/ApartmentController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/tenant/room/new_room.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/routes/users/tenant.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Tenant/RentController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Tenant/RoomController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/tenant/room/rooms.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Tenant/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Landlord/TenantController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/landlord/tenants/index.blade.php" />
       </list>
     </option>
   </component>
@@ -360,6 +357,22 @@
               <item name="Rentals" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Landlord" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rentals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rentals" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Tenant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rentals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rentals" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Middleware" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -426,6 +439,32 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rentals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rentals" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="roles_permissions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rentals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rentals" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rentals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rentals" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="landlord" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -443,7 +482,8 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="landlord" type="462c0819:PsiDirectoryNode" />
+              <item name="rent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Rentals" type="b2602c69:ProjectViewProjectNode" />
@@ -451,7 +491,16 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="tenant" type="462c0819:PsiDirectoryNode" />
+              <item name="landlord" type="462c0819:PsiDirectoryNode" />
+              <item name="tenants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rentals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rentals" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Rentals" type="b2602c69:ProjectViewProjectNode" />
@@ -483,6 +532,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/online_help" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -544,18 +594,17 @@
       <workItem from="1561234127460" duration="3297000" />
       <workItem from="1561449960575" duration="32399000" />
       <workItem from="1561578830776" duration="63000" />
-      <workItem from="1561606783279" duration="42887000" />
+      <workItem from="1561606783279" duration="49289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160011000" />
+    <option name="totallyTimeSpent" value="166413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23524962" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23524962" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -568,7 +617,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3315412" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3315412" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3297491" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -580,95 +629,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Jobs/VacateJob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#28#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/room/new_room.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1587">
-          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Rent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_27_173436_create_rents_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Landlord/ReportController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="47" selection-end-column="90" />
-          <folding>
-            <element signature="e#49#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Tenant/RentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="16" column="28" selection-start-line="16" selection-end-line="17" />
-          <folding>
-            <element signature="e#47#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Landlord/RentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-          <folding>
-            <element signature="e#49#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Landlord/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Landlord/TenantController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="48" />
-          <folding>
-            <element signature="e#49#74#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/user/user.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2346">
-          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/users/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -741,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users/tenant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -774,23 +724,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/password.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Tenant/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
-          <folding>
-            <element signature="e#47#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/room/rooms.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/damage/damage.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -819,13 +752,6 @@
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/tenants/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2553">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
@@ -873,37 +799,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/rent/new.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="154" column="13" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/user/all_users.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="113" column="32" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="228" selection-start-line="228" selection-end-line="228" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -913,7 +812,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/roles_permissions/roles_permissions.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
-          <caret line="132" column="10" lean-forward="true" selection-start-line="132" selection-end-line="187" />
+          <caret line="132" column="10" selection-start-line="132" selection-end-line="187" />
           <folding>
             <element signature="e#6087#8878#0#HTML" />
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
@@ -932,26 +831,70 @@
     <entry file="file://$PROJECT_DIR$/resources/views/backend/online_help/landlord.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_24_220831_update_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
+        <state relative-caret-position="322">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/apartments/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="45" column="54" lean-forward="true" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+          <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-975">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/user/user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1219">
+          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/user/all_users.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-354">
+          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/TenantRoomChecker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users/landlord.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -962,32 +905,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="88" selection-start-line="88" selection-end-line="100" />
+        <state relative-caret-position="290">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_24_220831_update_users_table.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/apartments/new.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="69" />
+        <state relative-caret-position="92">
+          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="89" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Landlord/ApartmentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="184">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/room/new_room.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="85" selection-start-line="85" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Jobs/VacateJob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users/tenant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/tenant/room/rooms.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="80" column="97" selection-start-line="80" selection-start-column="97" selection-end-line="80" selection-end-column="97" />
+          <folding>
+            <element signature="e#2297#3184#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Tenant/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+          <folding>
+            <element signature="e#47#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/rent/new.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2797">
+          <caret line="154" column="13" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Tenant/RoomController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Tenant/RentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding>
+            <element signature="e#47#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Landlord/TenantController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
-          <caret line="76" column="55" selection-start-line="76" selection-start-column="55" selection-end-line="76" selection-end-column="55" />
+          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
           <folding>
-            <element signature="e#40#66#0#PHP" expanded="true" />
+            <element signature="e#49#74#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/landlord/tenants/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
         </state>
       </provider>
     </entry>

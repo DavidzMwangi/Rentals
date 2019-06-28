@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/tenant/add_room';
+    protected $redirectTo = '/add_room';
 
 
 

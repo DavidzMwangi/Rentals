@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\LandLord;
 use App\Models\RoomNumber;
 use App\Models\Tenant;
 use App\Models\Vacate;
@@ -59,20 +60,30 @@ class UserController extends Controller
         $user->password=bcrypt($request->password);
         $user->save();
 
-        //0-admin 1-landlord 2-tenant
 
-        $tenantRole=Role::where('name','Tenant')->first();
-        $landlord=Role::where('name','Landlord')->first();
-        $admin=Role::where('name','Admin')->first();
-        if (request('user_type')==0) {
-        $user->assignRole($admin);
-        }else if (request('user_type')==1){
-            $user->assignRole($landlord);
-        }else{
-            $user->assignRole($tenantRole);
+        if ($user!=null){
+            //0-admin 1-landlord 2-tenant
 
+            $tenantRole=Role::where('name','Tenant')->first();
+            $landlord=Role::where('name','Landlord')->first();
+            $admin=Role::where('name','Admin')->first();
+            if (request('user_type')==0) {
+                $user->assignRole($admin);
+            }else if (request('user_type')==1){
+                $user->assignRole($landlord);
+            }else{
+                $user->assignRole($tenantRole);
+
+
+            }
+
+            $landlord=new LandLord();
+            $landlord->user_id=$user->id;
+            $landlord->paid_amount=0;
+            $landlord->save();
 
         }
+
 
         return redirect()->route('admin.users.all_users');
     }

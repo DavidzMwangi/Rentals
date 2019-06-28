@@ -55,9 +55,9 @@ class UserController extends Controller
         return response()->json($building);
     }
 
-    public function getRoomsBuilding($building)
+    public function getRoomsBuilding($building_id)
     {
-        $rooms=RoomNumber::where('building_id',$building)->where('is_vacant',false)->get();
+        $rooms=RoomNumber::where('building_id',$building_id)->where('is_vacant',true)->get();
         return response()->json([
             'rooms'=>$rooms
         ]);
@@ -72,7 +72,8 @@ class UserController extends Controller
 
 
         $room=RoomNumber::find($request->room_id);
-
+        $room->is_vacant=false;
+        $room->save();
 
         $tenant=new Tenant();
         $tenant->room_number_id=$request->room_id;

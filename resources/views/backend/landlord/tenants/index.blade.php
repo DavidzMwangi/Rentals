@@ -95,7 +95,7 @@
 
                                 </td>
                                 <td>
-                                  @{{ tenant.rent_balance }}
+                                  @{{ tenant.balanced*-1 }}
                                 </td>
                                 <td>
                                     @{{ tenant.current_deposit_amount }}
@@ -187,6 +187,7 @@
                     axios.get(url2)
                         .then(res => {
 
+                            console.log(res.data.tenants);
                             me.tenants=res.data.tenants;
 
                         })

@@ -77,17 +77,17 @@
 
 
 {{--                                    <div class="row">--}}
-                                        <div class="form-group  col-sm-12 col-md-6">
-                                            <label for="location">Location</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control select2" name="location_id" id="location" >
-                                                  @foreach(\App\Models\Location::all() as $location)
-                                                      <option value="{{$location->id}}">{{$location->name}}</option>
-                                                      @endforeach
+{{--                                        <div class="form-group  col-sm-12 col-md-6">--}}
+{{--                                            <label for="location">Location</label>--}}
+{{--                                            <div class="col-sm-10">--}}
+{{--                                                <select class="form-control select2" name="location_id" id="location" >--}}
+{{--                                                  @foreach(\App\Models\Location::all() as $location)--}}
+{{--                                                      <option value="{{$location->id}}">{{$location->name}}</option>--}}
+{{--                                                      @endforeach--}}
 
-                                                </select>
-                                            </div>
-                                        </div>
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 {{--                                    </div>--}}
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-sm-10">

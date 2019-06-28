@@ -2,9 +2,13 @@
 
 
 
+Route::get('testing', 'Tenant\RentController@rentBalance')->name('testing')->middleware('auth');
+
+
+
 Route::get('add_room', 'Tenant\UserController@addRoom')->name('add_room')->middleware('auth');
 Route::get('get_building_apartments/{apartment_id}','Tenant\UserController@buildingApartment')->middleware('auth')->name('get_building_apartments');
-Route::get('get_rooms_building/{apartment_id}','Tenant\UserController@getRoomsBuilding')->middleware('auth')->name('get_rooms_building');
+Route::get('get_rooms_building/{building_id}','Tenant\UserController@getRoomsBuilding')->middleware('auth')->name('get_rooms_building');
 Route::post('save_tenant_details_now','Tenant\UserController@saveTenantDetails')->middleware('auth')->name('save_tenant_details_now');
 
 Route::group(['middleware'=>['auth','role:Tenant','tenant_room'],'prefix'=>'tenant','as'=>'tenant.','namespace'=>'Tenant'],function () {

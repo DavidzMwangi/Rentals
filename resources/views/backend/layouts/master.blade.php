@@ -84,7 +84,7 @@
                     </a>
 
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
+                    <a href="{{route('landlord.vacations')}}" class="dropdown-item">
                         <i class="fa fa-arrow-circle-o-right mr-2"></i> Vacate Notifications
                     </a>
 
@@ -104,7 +104,7 @@
                     ?>
 
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
+                    <a href="{{route('landlord.all_maintenance')}}" class="dropdown-item">
                         <i class="fa fa-gears mr-2">
 
                         </i>{{count($maintenance)}}  Maintenance Notification

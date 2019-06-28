@@ -37,7 +37,7 @@ class ApartmentController extends Controller
         $apart->apartment_name=$request->apartment_name;
         $apart->description=$request->description;
         $apart->landlord_id=$landlord->id;
-        $apart->location_id=$request->location_id;
+        $apart->location_id=1;
         $apart->save();
 
 

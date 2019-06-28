@@ -75,6 +75,11 @@
 
                                     </a>
                                 </li>
+
+
+                                <li class="list-group-item">
+                                    <b>Rent Balance</b> <a class="float-right">Ksh. {{$balance*-1}}</a>
+                                </li>
                             </ul>
 
                         </div>
